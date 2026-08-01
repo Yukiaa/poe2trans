@@ -140,7 +140,11 @@ func main() {
 	fs := http.FileServer(http.Dir("static"))
 	http.Handle("/", fs)
 
-	addr := ":8080"
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+	addr := ":" + port
 	log.Printf("Server running at http://localhost%s", addr)
 	log.Fatal(http.ListenAndServe(addr, nil))
 }

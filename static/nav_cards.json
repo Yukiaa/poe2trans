@@ -1,0 +1,57 @@
+[
+    {
+        "name": "POE2市集",
+        "desc": "官方交易市场",
+        "url": "https://www.pathofexile.com/trade2",
+        "icon": "icons/poe2_trade.png"
+    },
+    {
+        "name": "Mobalytics",
+        "desc": "热门BD配装",
+        "url": "https://mobalytics.gg/poe-2/builds",
+        "icon": "icons/mobalytics.ico"
+    },
+    {
+        "name": "POE2编年史(繁体)",
+        "desc": "物品数据库",
+        "url": "https://poe2db.tw/tw/",
+        "icon": "icons/poe2db.png"
+    },
+    {
+        "name": "POE2编年史(简体)",
+        "desc": "物品数据库",
+        "url": "https://poe2db.tw/cn/",
+        "icon": "icons/poe2db.png"
+    },
+    {
+        "name": "采蘑菇",
+        "desc": "过滤器/补丁工具/论坛",
+        "url": "https://www.caimogu.cc/circle/449.html",
+        "icon": "icons/caimogu.ico"
+    },
+    {
+        "name": "忍者网",
+        "desc": "排行榜/BD参考",
+        "url": "https://poe.ninja/poe2/builds",
+        "icon": "icons/ninja.png"
+    },
+    {
+        "name": "POE 官网",
+        "desc": "官方网站",
+        "url": "https://www.pathofexile.com/",
+        "icon": "icons/poe2_official.png"
+    },
+    {
+        "name": "市集汉化",
+        "desc": "网页版市集汉化工具",
+        "url": "https://poe2db.tw/tw/chinese",
+        "icon": "icons/poe2db.png"
+    },
+    {
+        "name": "易刷工具箱",
+        "desc": "泥人/实时查价过滤",
+        "url": "https://www.caimogu.cc/post/1621584.html",
+        "icon": "icons/caimogu.ico"
+    }
+    
+]

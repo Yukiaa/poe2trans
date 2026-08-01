@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POE2 技能翻译查询</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-inner">
+                <div>
+                    <h1>POE2 技能翻译查询</h1>
+                    <p class="subtitle">支持简体 / 繁体 / 英文 三语搜索</p>
+                </div>
+                <button id="themeToggle" class="theme-toggle" title="切换主题">
+                    <span class="icon-sun">☀️</span>
+                    <span class="icon-moon">🌙</span>
+                </button>
+            </div>
+        </header>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="输入技能名（简体/繁体/英文）..." autocomplete="off">
+            <div class="suggestions" id="suggestions"></div>
+        </div>
+
+        <div class="results" id="results"></div>
+
+        <div class="detail" id="detail" style="display:none;"></div>
+
+        <div class="nav-section">
+            <div class="nav-header">
+                <h2 class="nav-title">常用工具 & 网站</h2>
+                <div class="nav-controls">
+                    <button class="nav-btn" id="editNavBtn">编辑</button>
+                    <button class="nav-btn nav-btn-primary" id="addNavBtn" style="display:none">+ 添加</button>
+                    <button class="nav-btn nav-btn-save" id="saveNavBtn" style="display:none">完成</button>
+                </div>
+            </div>
+            <div class="nav-grid" id="navGrid"></div>
+            <div class="nav-hint" id="navHint" style="display:none">拖动卡片调整顺序，点击卡片编辑</div>
+        </div>
+
+        <div class="bili-section">
+            <div class="bili-card">
+                <div class="bili-info">
+                    <div class="bili-avatar">
+                        <svg viewBox="0 0 24 24" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.347v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.853L4.6 3.4c-.18-.18-.272-.407-.276-.684-.004-.277.088-.504.276-.684.18-.18.408-.272.684-.276.276-.004.504.088.684.276L8.8 4.653h6.4L16.972 2c.18-.18.408-.272.684-.276.276-.004.504.088.684.276.188.18.28.407.276.684-.004.277-.096.504-.276.684L17.813 4.653zM5.333 7.24c-.744.012-1.372.26-1.884.744-.512.484-.788 1.116-.82 1.903v7.36c.024.744.284 1.372.78 1.884.496.512 1.132.788 1.908.82h13.333c.744-.012 1.372-.26 1.884-.744.512-.484.788-1.116.82-1.903v-7.36c-.024-.744-.284-1.372-.78-1.884-.496-.512-1.132-.788-1.908-.82H5.333zM8 11.107c.373 0 .684.124.933.373.25.25.384.569.404.957v1.173c-.02.372-.154.684-.404.933-.25.25-.56.384-.933.404-.373-.02-.684-.154-.933-.404-.25-.25-.384-.56-.404-.933V12.44c0-.388.134-.707.404-.957.25-.249.56-.376.933-.376zm8 0c.373 0 .684.124.933.373.25.25.384.569.404.957v1.173c-.02.372-.154.684-.404.933-.25.25-.56.384-.933.404-.373-.02-.684-.154-.933-.404-.25-.25-.384-.56-.404-.933V12.44c.02-.388.154-.707.404-.957.25-.249.56-.376.933-.376z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="bili-text">
+                        <div class="bili-title">作者：奚落Yuki</div>
+                        <div class="bili-desc">觉得好用，或者想给主播提意见，欢迎前往B站关注我！</div>
+                    </div>
+                </div>
+                <a class="bili-btn" href="https://space.bilibili.com/3394126?spm_id_from=333.1387.0.0" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.5 6.5h-4.3l1.3-3.1c.1-.3 0-.6-.2-.8l-.4-.4c-.3-.1-.6 0-.8.2L15 6.5h-4l-1.5-4.1c-.1-.3-.4-.4-.7-.3l-.5.4c-.2.2-.3.5-.2.8l1.3 3.1H5.5C4.1 6.5 3 7.6 3 9v8.5C3 18.8 4.1 20 5.5 20h13c1.4 0 2.5-1.2 2.5-2.5V9c0-1.4-1.1-2.5-2.5-2.5zM8 13c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1zm8 0c-.6 0-1-.4-1-1s.4-1 1-1 1 .4 1 1-.4 1-1 1z"/>
+                    </svg>
+                    <span>前往关注</span>
+                </a>
+            </div>
+        </div>
+
+        <footer>
+            <p>点击搜索结果或使用键盘 ↑↓ 选择，回车查看详情</p>
+        </footer>
+    </div>
+
+    <script src="/app.js"></script>
+</body>
+</html>
